@@ -1,0 +1,35 @@
+{
+  "step": [
+    {
+      "type": "login",
+      "title": "Login Form",
+      "bindValue": "Login Form",
+      "id": "Login",
+      "fieldSet": [
+        {
+          "type": "text",
+          "fieldType": "username",
+          "bindType": "",
+          "fieldTitle": "Username",
+          "bindValue": "",
+          "fieldname": "username",
+          "placeholder": "Enter your Username.",
+          "validation": "required",
+          "id": "username"
+        },
+
+        {
+          "type": "password",
+          "fieldType": "password",
+          "bindType": "",
+          "fieldTitle": "Password",
+          "bindValue": "",
+          "fieldname": "password",
+          "placeholder": "Enter your Password.",
+          "validation": "required",
+          "id": "password"
+        }
+      ]
+    }
+  ]
+}

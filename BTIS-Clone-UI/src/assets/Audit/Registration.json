@@ -1,0 +1,98 @@
+{
+  "step": [
+    {
+      "type": "registration",
+      "title": "Registration Form",
+      "bindValue": "Registration Form",
+      "id": "Registration",
+      "fieldSet": [
+        {
+          "type": "text",
+          "fieldType": "firstName",
+          "bindType": "api",
+          "fieldTitle": "First Name",
+          "bindValue": "",
+          "fieldname": "firstName",
+          "placeholder": "Enter your First Name",
+          "validation": "required",
+          "id": "firstName"
+          
+        },
+
+        {
+          "type": "text",
+          "fieldType": "middleName",
+          "bindType": "",
+          "fieldTitle": "Middle Name",
+          "bindValue": "",
+          "fieldname": "middleName",
+          "placeholder": "Enter your Middle Name",
+          "validation": "required",
+          "id": "middleName"
+         
+        },
+        {
+          "type": "text",
+          "fieldType": "lastName",
+          "bindType": "",
+          "fieldTitle": "Last Name",
+          "bindValue": "",
+          "fieldname": "lastName",
+          "placeholder": "Enter your Last Name",
+          "validation": "required",
+          "id": "lastName"
+        
+        },
+        {
+          "type": "text",
+          "fieldType": "phones",
+          "bindType": "",
+          "fieldTitle": "Contact Number",
+          "bindValue": "",
+          "fieldname": "phones",
+          "placeholder": "Enter your Contact Number",
+          "validation": "required",
+          "id": "phones"
+          
+        },
+        {
+          "type": "text",
+          "fieldType": "username",
+          "bindType": "",
+          "fieldTitle": "Username",
+          "bindValue": "",
+          "fieldname": "username",
+          "placeholder": "Enter your Username.",
+          "validation": "required",
+          "id": "username"
+          
+        },
+        {
+          "type": "text",
+          "fieldType": "email",
+          "bindType": "",
+          "fieldTitle": "Email Address",
+          "bindValue": "",
+          "fieldname": "email",
+          "placeholder": "Enter your Email Address",
+          "validation": "required",
+          "id": "email"
+         
+        },
+        {
+          "type": "password",
+          "fieldType": "password",
+          "bindType": "",
+          "fieldTitle": "Password",
+          "bindValue": "",
+          "fieldname": "password",
+          "placeholder": "Enter your Password.",
+          "validation": "required",
+          "id": "password"
+          
+        }
+        
+      ]
+    }
+  ]
+}

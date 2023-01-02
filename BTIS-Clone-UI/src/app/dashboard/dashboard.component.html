@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row">
+    <h5>Enter Submission Id</h5>
+    <div class="search">
+      <input
+        type="text"
+        class="form-control input-sm"
+        maxlength="64"
+        placeholder="Search"
+      />
+      <button type="submit" class="btn1 btn btn-primary btn-sm">Search</button>
+    </div>
+    <div class="text-end">
+      <button
+        type="submit"
+        class="btn btn-primary btn-sm"
+        routerLink="/address-form"
+      >
+        Add Quote
+      </button>
+    </div>
+
+    <div>
+      <br />
+      <table class="table table-bordered border-primary">
+        <thead>
+          <tr>
+            <th scope="col">Sr. No</th>
+            <th scope="col">Submission Id</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Status</th>
+            <th scope="col">Edit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of response; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ data.submissionID }}</td>
+            <td>{{ data.contact.firstName + " " + data.contact.lastName }}</td>
+            <td>{{ data.status }}</td>
+            <td>
+              <a>
+                <button class="btn btn-success" routerLink="/address-form">Edit</button>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

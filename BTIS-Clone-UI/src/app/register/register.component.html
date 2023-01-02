@@ -1,0 +1,199 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card" *ngFor="let item of jsondata">
+        <header class="card-header">
+          <h4
+            class="text-center mt-2"
+            *ngIf="item.title == 'Registration Form'"
+          >
+            {{ item.title }}
+          </h4>
+        </header>
+        <div class="card-body">
+          <form [formGroup]="signupForm" (ngSubmit)="signup()">
+            <div *ngFor="let field of item.fieldSet">
+              <div class="form-row">
+                <div class="col form-group">
+                  <label>{{ field.fieldTitle }}</label>
+                  <input
+                    type="text"
+                    formControlName="firstName"
+                    class="form-control"
+                    *ngIf="field.id == 'firstName'"
+                    type="{{ field.type }}"
+                    [(ngModel)]="field.bindvalue"
+                    name="{{ field.fieldname }}"
+                    placeholder="{{ field.placeholder }}"
+                    [ngClass]="{
+                      'is-invalid': submitted && f['firstName'].errors
+                    }"
+                  />
+                  <div
+                    *ngIf="submitted && f['firstName'].errors"
+                    class="invalid-feedback"
+                  >
+                    <div *ngIf="f['firstName'].errors['required']">
+                      <span>First Name is required</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col form-group">
+                  <input
+                    type="text"
+                    formControlName="middleName"
+                    class="form-control"
+                    *ngIf="field.id == 'middleName'"
+                    type="{{ field.type }}"
+                    [(ngModel)]="field.bindvalue"
+                    name="{{ field.fieldname }}"
+                    id="{{ field.id }}"
+                    placeholder="{{ field.placeholder }}"
+                    [ngClass]="{
+                      'is-invalid': submitted && f['middleName'].errors
+                    }"
+                  />
+                  <div
+                    *ngIf="submitted && f['middleName'].errors"
+                    class="invalid-feedback"
+                  >
+                    <div *ngIf="f['middleName'].errors['required']">
+                      Middle Name is required
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col form-group">
+                  <input
+                    type="text"
+                    formControlName="lastName"
+                    class="form-control"
+                    *ngIf="field.id == 'lastName'"
+                    type="{{ field.type }}"
+                    [(ngModel)]="field.bindvalue"
+                    name="{{ field.fieldname }}"
+                    id="{{ field.id }}"
+                    placeholder="{{ field.placeholder }}"
+                    [ngClass]="{
+                      'is-invalid': submitted && f['lastName'].errors
+                    }"
+                  />
+                  <div
+                    *ngIf="submitted && f['lastName'].errors"
+                    class="invalid-feedback"
+                  >
+                    <div *ngIf="f['lastName'].errors['required']">
+                      Last Name is required
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  formControlName="phones"
+                  class="form-control"
+                  *ngIf="field.id == 'phones'"
+                  type="{{ field.type }}"
+                  [(ngModel)]="field.bindvalue"
+                  name="{{ field.fieldname }}"
+                  id="{{ field.id }}"
+                  placeholder="{{ field.placeholder }}"
+                  [ngClass]="{ 'is-invalid': submitted && f['phones'].errors }"
+                />
+                <div
+                  *ngIf="submitted && f['phones'].errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f['phones'].errors['required']">
+                    Contact Number is required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="text"
+                  formControlName="username"
+                  class="form-control"
+                  *ngIf="field.id == 'username'"
+                  type="{{ field.type }}"
+                  [(ngModel)]="field.bindvalue"
+                  name="{{ field.fieldname }}"
+                  id="{{ field.id }}"
+                  placeholder="{{ field.placeholder }}"
+                  [ngClass]="{
+                    'is-invalid': submitted && f['username'].errors
+                  }"
+                />
+                <div
+                  *ngIf="submitted && f['username'].errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f['username'].errors['required']">
+                    Username is required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="text"
+                  formControlName="email"
+                  class="form-control"
+                  *ngIf="field.id == 'email'"
+                  type="{{ field.type }}"
+                  [(ngModel)]="field.bindvalue"
+                  name="{{ field.fieldname }}"
+                  id="{{ field.id }}"
+                  placeholder="{{ field.placeholder }}"
+                  [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+                />
+                <div
+                  *ngIf="submitted && f['email'].errors"
+                  class="invalid-feedback"
+                >
+                  <span *ngIf="f['email'].errors['required']">
+                    Email Address is required
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="text"
+                  formControlName="password"
+                  class="form-control"
+                  *ngIf="field.id == 'password'"
+                  type="{{ field.type }}"
+                  [(ngModel)]="field.bindvalue"
+                  name="{{ field.fieldname }}"
+                  id="{{ field.id }}"
+                  placeholder="{{ field.placeholder }}"
+                  [ngClass]="{
+                    'is-invalid': submitted && f['password'].errors
+                  }"
+                />
+                <div
+                  *ngIf="submitted && f['password'].errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f['password'].errors['required']">
+                    Password is required
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="form-group text-center">
+              <button type="submit" class="btn btn btn-outline-primary">
+                Register
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
