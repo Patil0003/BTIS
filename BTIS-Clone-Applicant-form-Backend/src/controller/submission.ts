@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import Customer from "../model/submission";
 import mongoose from "mongoose";
-
+//gghghghgjhghj
 // post-physical-and-mailing-address
 export const applicantForm = async (req: Request, res: Response) => {
   try {
